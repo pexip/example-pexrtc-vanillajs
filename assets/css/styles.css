@@ -1,0 +1,349 @@
+html,
+body {
+  font-family: 'Roboto';
+  padding: 0;
+  margin: 0;
+}
+
+.pageContainer {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #0a2136;
+}
+
+.pageContainer .preflightContainer {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.pageContainer .preflightContainer .preflightTitle {
+  text-align: center;
+  font-weight: 600;
+}
+
+.pageContainer .preflightContainer .preflightContent {
+  margin-top: 15px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+}
+
+.pageContainer .preflightContainer .preflightContent .preflightContentHead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+  font-weight: 600;
+}
+
+.pageContainer .preflightContainer .preflightContent .preflightContentBody {
+  padding: 5px;
+}
+
+.pageContainer .preflightContainer .preflightContent .preflightContentBody input {
+  border-radius: 5px;
+  border: 1px solid #333;
+  padding: 10px;
+  width: 94%;
+}
+
+.pageContainer .preflightContainer .preflightContent .preflightContentBody select {
+  border-radius: 5px;
+  border: 1px solid #333;
+  padding: 10px;
+  width: 100%;
+}
+
+.pageContainer .preflightContainer .preflightContent .preflightContentBody select:hover {
+  cursor: pointer;
+}
+
+.pageContainer .preflightContainer .preflightContent .preflightContentButton {
+  margin-top: 5px;
+  width: 100%;
+  text-align: center;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / span 2;
+}
+
+.pageContainer .preflightContainer .preflightContent .preflightContentButton button {
+  border-radius: 5px;
+  border: 1px solid #333;
+  padding: 10px;
+}
+
+.pageContainer .preflightContainer .preflightContent .preflightContentButton button:hover {
+  cursor: pointer;
+}
+
+.pageContainer .callContainer .callVideoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.pageContainer .callContainer .callVideoContainer video {
+  width: 100vw;
+}
+
+.pageContainer .callContainer .callVideoControls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.pageContainer .callContainer .callVideoControls .callVideoControl {
+  height: 50px;
+  width: 50px;
+  margin: 10px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 50px;
+  font-size: 30px;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.pageContainer .callContainer .callVideoControls .callVideoControl:hover {
+  cursor: pointer;
+  color: #333;
+}
+
+.pageContainer .callContainer .callVideoControls .callVideoControl .fa-microphone-slash,
+.pageContainer .callContainer .callVideoControls .callVideoControl .fa-video-slash {
+  color: red;
+}
+
+.pageContainer .callContainer .callVideoControls .active {
+  color: #c00000;
+}
+
+.pageContainer .callContainer .callVideoControls .active:hover {
+  cursor: pointer;
+  color: #d9381e;
+}
+
+.pageContainer .callContainer .callPinRequestContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.pageContainer .callContainer .callPinRequestContainer .callPinRequestWindow {
+  border-radius: 15px;
+  background-color: #fff;
+  padding: 15px;
+}
+
+.pageContainer .callContainer .callPinRequestContainer .callPinRequestWindow .callPinTitle {
+  text-align: center;
+  font-weight: 600;
+}
+
+.pageContainer .callContainer .callPinRequestContainer .callPinRequestWindow .callPinContent {
+  margin-top: 15px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+}
+
+.pageContainer .callContainer .callPinRequestContainer .callPinRequestWindow .callPinContent .callPinContentHead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+  font-weight: 600;
+}
+
+.pageContainer .callContainer .callPinRequestContainer .callPinRequestWindow .callPinContent .callPinContentBody {
+  padding: 5px;
+}
+
+.pageContainer .callContainer .callPinRequestContainer .callPinRequestWindow .callPinContent .callPinContentBody input {
+  border-radius: 5px;
+  border: 1px solid #333;
+  padding: 10px;
+}
+
+.pageContainer .callContainer .callPinRequestContainer .callPinRequestWindow .callPinContentButton {
+  margin-top: 5px;
+  width: 100%;
+  text-align: center;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / span 2;
+}
+
+.pageContainer .callContainer .callPinRequestContainer .callPinRequestWindow .callPinContentButton button {
+  border-radius: 5px;
+  border: 1px solid #333;
+  padding: 10px;
+}
+
+.pageContainer .callContainer .callPinRequestContainer .callPinRequestWindow .callPinContentButton button:hover {
+  cursor: pointer;
+}
+
+.pageContainer .callContainer .settingsButton {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  height: 50px;
+  width: 50px;
+  line-height: 52px;
+  text-align: center;
+  border-radius: 50px;
+  font-size: 30px;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.pageContainer .callContainer .settingsButton:hover {
+  cursor: pointer;
+  background-color: #eee;
+}
+
+.pageContainer .callSelfviewContainer {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.pageContainer .callSelfviewContainer video {
+  width: 200px;
+  background-color: #000;
+}
+
+.pageContainer .settingsContainer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.pageContainer .settingsContainer .settingsPopup {
+  border-radius: 15px;
+  background-color: #fff;
+  padding: 15px;
+}
+
+.pageContainer .settingsContainer .settingsPopup .settingsPopupTitle {
+  text-align: center;
+  font-weight: 600;
+}
+
+.pageContainer .settingsContainer .settingsPopup .settingsPopupContent {
+  margin-top: 15px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+}
+
+.pageContainer .settingsContainer .settingsPopup .settingsPopupContent .settingsPopupHead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+  font-weight: 600;
+}
+
+.pageContainer .settingsContainer .settingsPopup .settingsPopupContent .settingsPopupBody {
+  padding: 5px;
+}
+
+.pageContainer .settingsContainer .settingsPopup .settingsPopupContent .settingsPopupBody input {
+  border-radius: 5px;
+  border: 1px solid #333;
+  padding: 10px;
+}
+
+.pageContainer .settingsContainer .settingsPopup .settingsPopupContent .settingsPopupBody select {
+  border-radius: 5px;
+  border: 1px solid #333;
+  padding: 10px;
+  width: 100%;
+}
+
+.pageContainer .settingsContainer .settingsPopup .settingsPopupContent .settingsPopupBody select:hover {
+  cursor: pointer;
+}
+
+.pageContainer .settingsContainer .settingsPopup .settingsPopupContent .settingsPopupButton {
+  margin-top: 5px;
+  width: 100%;
+  text-align: center;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / span 2;
+}
+
+.pageContainer .settingsContainer .settingsPopup .settingsPopupContent .settingsPopupButton button {
+  border-radius: 5px;
+  border: 1px solid #333;
+  padding: 10px;
+}
+
+.pageContainer .settingsContainer .settingsPopup .settingsPopupContent .settingsPopupButton button:hover {
+  cursor: pointer;
+}
+/*# sourceMappingURL=styles.css.map */

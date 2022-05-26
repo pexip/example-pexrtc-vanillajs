@@ -1,0 +1,339 @@
+html,
+body {
+  font-family: 'Roboto';
+
+  padding: 0;
+  margin: 0;
+}
+
+.pageContainer {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #0a2136;
+
+  .preflightContainer {
+    background-color: #fff;
+    border-radius: 15px;
+
+    padding: 15px;
+
+    .preflightTitle {
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .preflightContent {
+      margin-top: 15px;
+      display: grid;
+      grid-template-columns: auto auto;
+
+      .preflightContentHead {
+        display: flex;
+        align-items: center;
+
+        padding: 5px;
+        font-weight: 600;
+      }
+
+      .preflightContentBody {
+        padding: 5px;
+
+        input {
+          border-radius: 5px;
+          border: 1px solid #333;
+          padding: 10px;
+
+          width: 94%;
+        }
+
+        select {
+          border-radius: 5px;
+          border: 1px solid #333;
+          padding: 10px;
+
+          width: 100%;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+
+      .preflightContentButton {
+        margin-top: 5px;
+        width: 100%;
+
+        text-align: center;
+        grid-column: 1 / span 2;
+
+        button {
+          border-radius: 5px;
+          border: 1px solid #333;
+          padding: 10px;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .callContainer {
+    .callVideoContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 100vw;
+      height: 100vh;
+
+      video {
+        width: 100vw;
+      }
+    }
+
+    .callVideoControls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      position: absolute;
+
+      bottom: 0px;
+      left: 50%;
+
+      transform: translateX(-50%);
+
+      .callVideoControl {
+        height: 50px;
+        width: 50px;
+
+        margin: 10px;
+
+        line-height: 50px;
+
+        text-align: center;
+
+        border-radius: 50px;
+        font-size: 30px;
+
+        background-color: #fff;
+
+        padding: 10px;
+
+        &:hover {
+          cursor: pointer;
+          color: #333;
+        }
+
+        .fa-microphone-slash,
+        .fa-video-slash {
+          color: red;
+        }
+      }
+
+      .active {
+        color: #c00000;
+
+        &:hover {
+          cursor: pointer;
+          color: #d9381e;
+        }
+      }
+    }
+
+    .callPinRequestContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      position: fixed;
+
+      left: 0;
+      top: 0;
+
+      width: 100vw;
+      height: 100vh;
+
+      background-color: rgba(0, 0, 0, 0.8);
+
+      .callPinRequestWindow {
+        border-radius: 15px;
+
+        background-color: #fff;
+
+        padding: 15px;
+
+        .callPinTitle {
+          text-align: center;
+          font-weight: 600;
+        }
+
+        .callPinContent {
+          margin-top: 15px;
+          display: grid;
+          grid-template-columns: auto auto;
+
+          .callPinContentHead {
+            display: flex;
+            align-items: center;
+
+            padding: 5px;
+            font-weight: 600;
+          }
+
+          .callPinContentBody {
+            padding: 5px;
+
+            input {
+              border-radius: 5px;
+              border: 1px solid #333;
+              padding: 10px;
+            }
+          }
+        }
+
+        .callPinContentButton {
+          margin-top: 5px;
+          width: 100%;
+
+          text-align: center;
+          grid-column: 1 / span 2;
+
+          button {
+            border-radius: 5px;
+            border: 1px solid #333;
+            padding: 10px;
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+
+    .settingsButton {
+      position: absolute;
+
+      left: 10px;
+      bottom: 10px;
+
+      height: 50px;
+      width: 50px;
+
+      line-height: 52px;
+
+      text-align: center;
+
+      border-radius: 50px;
+      font-size: 30px;
+
+      background-color: #fff;
+
+      padding: 10px;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #eee;
+      }
+    }
+  }
+
+  .callSelfviewContainer {
+    position: absolute;
+
+    right: 10px;
+    bottom: 10px;
+
+    video {
+      width: 200px;
+      background-color: #000;
+    }
+  }
+
+  .settingsContainer {
+    position: fixed;
+
+    width: 100%;
+    height: 100%;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(0, 0, 0, 0.8);
+
+    .settingsPopup {
+      border-radius: 15px;
+
+      background-color: #fff;
+
+      padding: 15px;
+
+      .settingsPopupTitle {
+        text-align: center;
+        font-weight: 600;
+      }
+
+      .settingsPopupContent {
+        margin-top: 15px;
+        display: grid;
+        grid-template-columns: auto auto;
+
+        .settingsPopupHead {
+          display: flex;
+          align-items: center;
+
+          padding: 5px;
+          font-weight: 600;
+        }
+
+        .settingsPopupBody {
+          padding: 5px;
+
+          input {
+            border-radius: 5px;
+            border: 1px solid #333;
+            padding: 10px;
+          }
+
+          select {
+            border-radius: 5px;
+            border: 1px solid #333;
+            padding: 10px;
+
+            width: 100%;
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+
+        .settingsPopupButton {
+          margin-top: 5px;
+          width: 100%;
+
+          text-align: center;
+          grid-column: 1 / span 2;
+
+          button {
+            border-radius: 5px;
+            border: 1px solid #333;
+            padding: 10px;
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}

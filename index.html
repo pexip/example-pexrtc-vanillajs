@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Pexip PexRTC VanillaJS Example</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    <script
+      type="text/javascript"
+      src="https://au.pexipdemo.com/static/webrtc/js/pexrtc.js"
+    ></script>
+
+    <script src="assets/scripts/ui.js" async defer></script>
+    <script src="assets/scripts/preflight.js" async defer></script>
+    <script src="assets/scripts/call.js" async defer></script>
+
+    <div class="pageContainer" id="pageContainer">
+      <div class="preflightContainer" id="preflightContainer">
+        <div class="preflightTitle">Get Started</div>
+        <div class="preflightContent">
+          <div class="preflightContentHead">Your Name</div>
+          <div class="preflightContentBody">
+            <input type="text" id="participantName" />
+          </div>
+
+          <div class="preflightContentHead">URI to Dial</div>
+          <div class="preflightContentBody">
+            <input type="text" id="dialURI" />
+          </div>
+
+          <div class="preflightContentHead">Video Device</div>
+          <div class="preflightContentBody">
+            <select class="videoDevices" id="videoDevices">
+              <option value="loading">Loading...</option>
+            </select>
+          </div>
+
+          <div class="preflightContentHead">Audio Device</div>
+          <div class="preflightContentBody">
+            <select class="audioDevices" id="audioDevices">
+              <option value="loading">Loading...</option>
+            </select>
+          </div>
+
+          <div class="preflightContentButton">
+            <button onClick="connectCall()">Connect</button>
+          </div>
+        </div>
+      </div>
+      <div class="callContainer" id="callContainer" style="display: none">
+        <div class="callVideoContainer">
+          <video id="farEndVideo" autoplay="autoplay"></video>
+        </div>
+        <div class="callVideoControls">
+          <div class="callVideoControl" onClick="hangup()">
+            <i class="fa-solid fa-phone-slash"></i>
+          </div>
+          <div class="callVideoControl" onClick="toggleMicMute()">
+            <i id="micMute" class="fa-solid fa-microphone"></i>
+          </div>
+          <div class="callVideoControl" onClick="toggleVidMute() ">
+            <i id="vidMute" class="fa-solid fa-video"></i>
+          </div>
+        </div>
+        <div class="settingsButton" onClick="showSettings()">
+          <i class="fa-solid fa-gear"></i>
+        </div>
+        <div class="callPinRequestContainer" id="callPinRequestContainer">
+          <div class="callPinRequestWindow">
+            <div class="callPinTitle" id="callPinTitle">...</div>
+
+            <div class="callPinContent">
+              <div class="callPinContentHead">Your Pin</div>
+              <div class="callPinContentBody">
+                <input type="text" id="pin" />
+              </div>
+            </div>
+
+            <div class="callPinContentButton">
+              <button onClick="enterCall()">Connect</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="callSelfviewContainer"
+        id="callSelfviewContainer"
+        style="display: none"
+      >
+        <video id="selfViewVideo" autoplay="autoplay" muted></video>
+      </div>
+      <div
+        class="settingsContainer"
+        id="settingsContainer"
+        style="display: none"
+      >
+        <div class="settingsPopup">
+          <div class="settingsPopupTitle">Settings</div>
+
+          <div class="settingsPopupContent">
+            <div class="settingsPopupHead">Video Device</div>
+            <div class="settingsPopupBody">
+              <select class="videoDevices" onChange="selectMedia()">
+                <option value="loading">Loading...</option>
+              </select>
+            </div>
+
+            <div class="settingsPopupHead">Audio Device</div>
+            <div class="settingsPopupBody">
+              <select class="audioDevices" onChange="selectMedia()">
+                <option value="loading">Loading...</option>
+              </select>
+            </div>
+
+            <div class="settingsPopupButton">
+              <button onClick="closeSettings()">close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
